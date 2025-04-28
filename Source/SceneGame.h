@@ -3,6 +3,8 @@
 #include"Stage.h"
 #include"Player.h"
 #include"Scene.h"
+#include "CameraController.h"
+
 class SceneGame :public Scene
 {
 public:
@@ -27,4 +29,5 @@ public:
 private:
 	Stage* stage = nullptr;
 	Player* player = nullptr;
+	CameraController* cameraController = nullptr;
 };

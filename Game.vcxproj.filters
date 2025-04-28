@@ -19,9 +19,6 @@
     <Filter Include="Source\System">
       <UniqueIdentifier>{bdca9bd5-7c86-4bde-986d-9cf51f91eb5a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source\ProjectScenes">
-      <UniqueIdentifier>{70b8fd0c-1297-4123-9f4a-21f0afb4a5d8}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="External\imgui-docking\imconfig.h">
@@ -123,23 +120,29 @@
     <ClInclude Include="Source\Player.h">
       <Filter>Source</Filter>
     </ClInclude>
+    <ClInclude Include="Source\SceneTutorial.h">
+      <Filter>Source</Filter>
+    </ClInclude>
     <ClInclude Include="Source\SceneTitle.h">
-      <Filter>Source\ProjectScenes</Filter>
+      <Filter>Source</Filter>
     </ClInclude>
     <ClInclude Include="Source\SceneManager.h">
-      <Filter>Source\ProjectScenes</Filter>
+      <Filter>Source</Filter>
     </ClInclude>
     <ClInclude Include="Source\SceneLoading.h">
-      <Filter>Source\ProjectScenes</Filter>
+      <Filter>Source</Filter>
     </ClInclude>
     <ClInclude Include="Source\SceneGame.h">
-      <Filter>Source\ProjectScenes</Filter>
+      <Filter>Source</Filter>
     </ClInclude>
     <ClInclude Include="Source\Scene.h">
-      <Filter>Source\ProjectScenes</Filter>
+      <Filter>Source</Filter>
     </ClInclude>
-    <ClInclude Include="Source\SceneTutorial.h">
-      <Filter>Source\ProjectScenes</Filter>
+    <ClInclude Include="Source\Camera.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CameraController.h">
+      <Filter>Source\System</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -227,20 +230,26 @@
     <ClCompile Include="Source\Player.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="Source\SceneTitle.cpp">
-      <Filter>Source\ProjectScenes</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\SceneManager.cpp">
-      <Filter>Source\ProjectScenes</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\SceneLoading.cpp">
-      <Filter>Source\ProjectScenes</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\SceneGame.cpp">
-      <Filter>Source\ProjectScenes</Filter>
+    <ClCompile Include="Source\Camera.cpp">
+      <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\SceneTutorial.cpp">
-      <Filter>Source\ProjectScenes</Filter>
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SceneTitle.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SceneManager.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SceneLoading.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SceneGame.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CameraController.cpp">
+      <Filter>Source</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
