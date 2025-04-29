@@ -7,8 +7,9 @@ class Stage
 public:
 	Stage();
 	~Stage();
-
+	//XVˆ—
 	void Update(float elapsedTime);
+	//•`‰æˆ—
 	void Render(const RenderContext& rc, ModelRenderer* renderer);
 
 private:

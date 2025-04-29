@@ -5,13 +5,18 @@
 #include"SceneTutorial.h"
 #include"SceneManager.h"
 #include"SceneLoading.h"
+
+//初期化
 void SceneTitle::Initialize()
 {
+	//スプライト初期化
 	sprite = new Sprite("Data/Sprite/Title.png");
 }
 
+//終了化
 void SceneTitle::Finalize()
 {
+	//スプライト
 	if (sprite != nullptr)
 	{
 		delete sprite;
@@ -19,19 +24,21 @@ void SceneTitle::Finalize()
 	}
 }
 
+//更新処理
 void SceneTitle::Update(float elapsedTime)
 {
 	GamePad& gamePad = Input::Instance().GetGamePad();
 	
+	//ZXボタンでゲームシーン
 	const GamePadButton anyButton1 =
 		GamePad::BTN_A
 		| GamePad::BTN_B;
-
 	if (gamePad.GetButtonDown() & anyButton1)
 	{
 		SceneManager::Instance().ChangeScene(new SceneLoading(new SceneGame));
 	}
 	
+	//CVボタンでチュートリアルシーン
 	const GamePadButton anyButton2 =
 		GamePad::BTN_X
 		| GamePad::BTN_Y;
@@ -41,17 +48,21 @@ void SceneTitle::Update(float elapsedTime)
 	}
 }
 
+//描画処理
 void SceneTitle::Render()
 {
 	Graphics& graphics = Graphics::Instance();
 	ID3D11DeviceContext* dc = graphics.GetDeviceContext();
 	RenderState* renderState = graphics.GetRenderState();
 
+	//描画準備
 	RenderContext rc;
 	rc.deviceContext = dc;
 	rc.renderState = graphics.GetRenderState();
 
+	//2Dスプライト描画
 	{
+		//タイトル描画
 		float screenWidth = static_cast<float>(graphics.GetScreenWidth());
 		float screenHeight = static_cast<float>(graphics.GetScreenHeight());
 		sprite->Render(rc,
@@ -61,6 +72,7 @@ void SceneTitle::Render()
 	}
 }
 
+//GUI描画
 void SceneTitle::DrawGUI() 
 {
 

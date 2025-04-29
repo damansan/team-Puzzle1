@@ -7,7 +7,8 @@ class Character
 public:
 	Character() {};
 	virtual~Character() {};
-
+	
+	//行列更新処理
 	void UpdateTransform();
 
 	//位置取得

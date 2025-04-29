@@ -5,8 +5,11 @@
 // 初期化
 void SceneGame::Initialize()
 {
+	//ステージ
 	stage = new Stage;
+	//プレイヤー
 	player = new Player;
+	//カメラコントローラー
 	cameraController = new  CameraController;
 
 	//カメラの初期設定
@@ -32,18 +35,19 @@ void SceneGame::Initialize()
 // 終了化
 void SceneGame::Finalize()
 {
+	//ステージ
 	if (stage != nullptr)
 	{
 		delete stage;
 		stage = nullptr;
 	}
-
+	//プレイヤー
 	if (player != nullptr)
 	{
 		delete player;
 		player = nullptr;
 	}
-
+	//カメラコントローラー
 	if (cameraController != nullptr)
 	{
 		delete cameraController;
@@ -54,7 +58,9 @@ void SceneGame::Finalize()
 // 更新処理
 void SceneGame::Update(float elapsedTime)
 {
+	//ステージ
 	stage->Update(elapsedTime);
+	//プレイヤー
 	player->Update(elapsedTime);
 
 	//カメラコントローラーの更新処理
@@ -107,7 +113,9 @@ void SceneGame::Render()
 
 	// 3Dモデル描画
 	{
+		//ステージ
 		stage->Render(rc, modelRenderer);
+		//プレイヤー
 		player->Render(rc, modelRenderer);
 	}
 
@@ -125,7 +133,7 @@ void SceneGame::Render()
 // GUI描画
 void SceneGame::DrawGUI()
 {
-#ifdef _DEBUG
+#ifdef _DEBUG//デバッグの時のみ通る
 	player->DrawDebugGUI();
 #endif 
 

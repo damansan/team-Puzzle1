@@ -1,19 +1,24 @@
 #include "Player.h"
 #include "System/Input.h"
 
+//コンストラクタ
 Player::Player()
 {
 	model = new Model("Data/Model/Mr.Incredible/Mr.Incredible.mdl");
+	//スケーリング
 	scale.x = scale.y = scale.z = 0.01f;
 }
 
+//デストラクタ
 Player::~Player()
 {
 	delete model;
 }
 
+//更新処理
 void Player::Update(float elapsedTime)
 {
+	//左スティックの入力情報をもとにXZ平面への移動処理
 	GamePad& gamePad = Input::Instance().GetGamePad();
 	float ax = gamePad.GetAxisLX();
 	float ay = gamePad.GetAxisLY();
@@ -21,8 +26,10 @@ void Player::Update(float elapsedTime)
 	position.x += ax * moveSpeed;
 	position.z += ay * moveSpeed;
 
+	//オブジェクト行列更新
 	UpdateTransform();
 
+	//モデル行列更新
 	model->UpdateTransform();
 }
 
@@ -32,6 +39,7 @@ void Player::Render(const RenderContext& rc, ModelRenderer* renderer)
 	renderer->Render(rc, transform, model, ShaderId::Lambert);
 }
 
+//デバッグGUI
 #ifdef _DEBUG
 void Player::DrawDebugGUI()
 {

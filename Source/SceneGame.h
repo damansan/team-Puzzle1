@@ -5,6 +5,7 @@
 #include"Scene.h"
 #include "CameraController.h"
 
+//ƒQ[ƒ€ƒV[ƒ“
 class SceneGame :public Scene
 {
 public:
