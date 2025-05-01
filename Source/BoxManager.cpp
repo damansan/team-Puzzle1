@@ -1,25 +1,21 @@
 #include"BoxManager.h"
 #include"TrueBox.h"
 
-void BoxManager::Generate(int Counter)
+void BoxManager::Generate()
 {
 	BoxManager& boxManager = BoxManager::Instance();
 
 	int map[10][10] =
 	{
-		//{1,1,1,1,1,1,1,1,1,1 },
-		//{0,0,0,0,0,0,0,0,0,1},
-		//{0,0,0,0,0,0,0,0,0,1},
-		//{1,0,0,0,0,0,1,1,1,1},
-		{1,0,1},
-		{1,0,1},
-		{1,0,1},
-		{1}
+		{1,1,1,1,1,1,1,1,1,1 },
+		{0,0,0,0,0,0,0,0,0,1},
+		{0,0,0,0,0,0,0,0,0,1},
+		{1,0,0,0,0,0,1,1,1,1},
 	};
 
-	for (int y = 0; y < Counter; y++)
+	for (int y = 0; y < 10; y++)
 	{
-		for (int x = 0; x < Counter; x++)
+		for (int x = 0; x < 10; x++)
 		{
 			if (map[y][x] == 1)
 			{
@@ -41,6 +37,7 @@ void BoxManager::Clear()
 	}
 }
 
+//çXêVèàóù
 void BoxManager::Update(float elapsedTime)
 {
 	for (Box* box : boxs)
@@ -48,6 +45,8 @@ void BoxManager::Update(float elapsedTime)
 		box->Update(elapsedTime);
 	}
 }
+
+//ï`âÊèàóù
 void BoxManager::Render(const RenderContext& rc, ModelRenderer* renderer)
 {
 	for (Box* box : boxs)
@@ -55,6 +54,8 @@ void BoxManager::Render(const RenderContext& rc, ModelRenderer* renderer)
 		box->Render(rc, renderer);
 	}
 }
+
+//É{ÉbÉNÉXìoò^
 void BoxManager::Register(Box* box)
 {
 	boxs.emplace_back(box);
