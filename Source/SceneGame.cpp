@@ -1,6 +1,8 @@
 #include "System/Graphics.h"
 #include "SceneGame.h"
 #include "Camera.h"
+#include "BoxManager.h"
+#include "TrueBox.h"
 
 // 初期化
 void SceneGame::Initialize()
@@ -28,6 +30,8 @@ void SceneGame::Initialize()
 		1000.0f
 	);
 
+	//ボックス初期化＆配置
+	BoxManager::Generate(10);//引数でBoxの数を決める(True)
 
 
 }
@@ -53,6 +57,8 @@ void SceneGame::Finalize()
 		delete cameraController;
 		cameraController = nullptr;
 	}
+	//Box終了化
+	BoxManager::Instance().Clear();
 }
 
 // 更新処理
@@ -68,6 +74,9 @@ void SceneGame::Update(float elapsedTime)
 	target.y += 0.5f;
 	cameraController->SeTarget(target);
 	cameraController->Update(elapsedTime);
+	
+	//Box更新処理
+	BoxManager::Instance().Update(elapsedTime);
 }
 
 // 描画処理
@@ -117,6 +126,8 @@ void SceneGame::Render()
 		stage->Render(rc, modelRenderer);
 		//プレイヤー
 		player->Render(rc, modelRenderer);
+		//Box
+		BoxManager::Instance().Render(rc, modelRenderer);
 	}
 
 	// 3Dデバッグ描画

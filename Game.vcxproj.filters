@@ -144,6 +144,15 @@
     <ClInclude Include="Source\CameraController.h">
       <Filter>Source\System</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Box.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\BoxManager.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\TrueBox.h">
+      <Filter>Source</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="External\imgui-docking\imgui.cpp">
@@ -249,6 +258,12 @@
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\CameraController.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\BoxManager.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\TrueBox.cpp">
       <Filter>Source</Filter>
     </ClCompile>
   </ItemGroup>

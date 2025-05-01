@@ -13,3 +13,8 @@ void Character::UpdateTransform()
 	// 計算したワールド行列を取り出す
 	DirectX::XMStoreFloat4x4(&transform, W);
 }
+
+void Character::RenderDebugPrimiteve(const RenderContext& rc, ShapeRenderer* renderer)
+{
+	renderer->RenderSphere(rc, position, radius, DirectX::XMFLOAT4(0, 0, 0, 1));
+}

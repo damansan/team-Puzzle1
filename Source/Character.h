@@ -2,6 +2,8 @@
 
 #include<DirectXMath.h>
 #include<imgui.h>
+#include"System/ShapeRenderer.h"
+
 class Character
 {
 public:
@@ -29,6 +31,8 @@ public:
 	//ƒXƒP[ƒ‹Žæ“¾
 	void SetScale(const DirectX::XMFLOAT3& scale) { this->scale = scale; }
 
+	virtual void RenderDebugPrimiteve(const RenderContext& rc, ShapeRenderer* renderer);
+
 protected:
 	DirectX::XMFLOAT3 position = { 0,0,0 };
 	DirectX::XMFLOAT3 angle = { 0,0,0 };
@@ -39,4 +43,5 @@ protected:
 		0,0,1,0,
 		0,0,0,1
 	};
+	float radius = 0.5f;
 };
