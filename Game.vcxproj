@@ -126,6 +126,7 @@
     <ClInclude Include="Source\Character.h" />
     <ClInclude Include="Source\Framework.h" />
     <ClInclude Include="Source\Player.h" />
+    <ClInclude Include="Source\Raycast.h" />
     <ClInclude Include="Source\Scene.h" />
     <ClInclude Include="Source\SceneGame.h" />
     <ClInclude Include="Source\SceneLoading.h">
@@ -172,6 +173,7 @@
     <ClCompile Include="Source\Framework.cpp" />
     <ClCompile Include="Source\Main.cpp" />
     <ClCompile Include="Source\Player.cpp" />
+    <ClCompile Include="Source\Raycast.cpp" />
     <ClCompile Include="Source\SceneGame.cpp" />
     <ClCompile Include="Source\SceneLoading.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>

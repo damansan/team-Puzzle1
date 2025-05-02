@@ -153,6 +153,9 @@
     <ClInclude Include="Source\TrueBox.h">
       <Filter>Source</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Raycast.h">
+      <Filter>Source</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="External\imgui-docking\imgui.cpp">
@@ -264,6 +267,9 @@
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\TrueBox.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Raycast.cpp">
       <Filter>Source</Filter>
     </ClCompile>
   </ItemGroup>
