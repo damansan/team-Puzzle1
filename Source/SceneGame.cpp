@@ -31,7 +31,7 @@ void SceneGame::Initialize()
 	);
 
 	//ボックス初期化＆配置
-	BoxManager::Generate(10);//引数でBoxの数を決める(True)
+	BoxManager::Generate();
 
 
 }
@@ -57,7 +57,7 @@ void SceneGame::Finalize()
 		delete cameraController;
 		cameraController = nullptr;
 	}
-	//Box終了化
+	//TrueBox終了化
 	BoxManager::Instance().Clear();
 }
 
@@ -75,7 +75,7 @@ void SceneGame::Update(float elapsedTime)
 	cameraController->SeTarget(target);
 	cameraController->Update(elapsedTime);
 	
-	//Box更新処理
+	//TrueBox更新処理
 	BoxManager::Instance().Update(elapsedTime);
 }
 
@@ -126,7 +126,7 @@ void SceneGame::Render()
 		stage->Render(rc, modelRenderer);
 		//プレイヤー
 		player->Render(rc, modelRenderer);
-		//Box
+		//TrueBox
 		BoxManager::Instance().Render(rc, modelRenderer);
 	}
 
