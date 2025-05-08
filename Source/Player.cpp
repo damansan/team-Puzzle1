@@ -35,6 +35,15 @@ void Player::Update(float elapsedTime)
 	//position.x += ax * moveSpeed;
 	//position.z += ay * moveSpeed;
 
+	//moveCooldown -= elapsedTime;
+	//if (moveCooldown < -0.0f)
+	//{
+	//	InputGridMove();
+	//}
+
+	UpdateTransform();
+	model->UpdateTransform();
+
 	//移動入力処理
 	InputMove(elapsedTime);
 
@@ -45,6 +54,37 @@ void Player::Update(float elapsedTime)
 	model->UpdateTransform();
 }
 
+void Player::InputGridMove()
+{
+	GamePad& gamePad = Input::Instance().GetGamePad();
+
+	float ax = gamePad.GetAxisLX();
+	float ay = gamePad.GetAxisLY();
+
+	const float threshold = 0.5f;  // デッドゾーン
+	float step = 1.0f;             // 1マスの距離（グリッド単位）
+
+	if (ax > threshold)
+	{
+		position.x += step;
+		moveCooldown = moveInterval;
+	}
+	else if (ax < -threshold)
+	{
+		position.x -= step;
+		moveCooldown = moveInterval;
+	}
+	else if (ay > threshold)
+	{
+		position.z += step;
+		moveCooldown = moveInterval;
+	}
+	else if (ay < -threshold)
+	{
+		position.z -= step;
+		moveCooldown = moveInterval;
+	}
+}
 //移動処理
 void Player::Move(float elapsedTime, float vx, float vz, float speed)
 {
@@ -113,6 +153,8 @@ void Player::Render(const RenderContext& rc, ModelRenderer* renderer)
 	renderer->Render(rc, transform, model, ShaderId::Lambert);
 }
 
+
+
 //デバッグGUI
 #ifdef _DEBUG
 void Player::DrawDebugGUI()
@@ -174,11 +216,18 @@ DirectX::XMFLOAT3 Player::GetMoveVec()const
 	float cameraFrontZ = cameraFront.z;
 	float cameraFrontLength = sqrtf(cameraFrontX * cameraFrontX + cameraFrontZ * cameraFrontZ);
 
-	if (cameraFrontLength > 0.0f)
+	if (cameraFrontLength > 0.0001f)
 	{
 		//単位ベクトル化
 		cameraFrontX = cameraFrontX / cameraFrontLength;
 		cameraFrontZ = cameraFrontZ / cameraFrontLength;
+	}
+	else
+	{
+		//前方向が真下/真上向きになってしまっているので、デフォルト前方向を使う
+		cameraFrontX = 0.0f;
+		cameraFrontZ = 1.0f;
+
 	}
 
 	// スティックの水平入力値をカメラ右方向に反映し、
@@ -190,5 +239,10 @@ DirectX::XMFLOAT3 Player::GetMoveVec()const
 	//Y軸方向には移動しない
 	vec.y = 0.0f;
 
+	float len5q = vec.x * vec.x + vec.z * vec.z;
+	if (len5q < 0.01f)
+	{
+		vec.x = vec.z = 0.0f;
+	}
 	return vec;
 }

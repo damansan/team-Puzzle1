@@ -72,7 +72,7 @@ void SceneGame::Update(float elapsedTime)
 	//カメラコントローラーの更新処理
 	DirectX::XMFLOAT3 target = player->GetPosition();
 	target.y += 0.5f;
-	cameraController->SeTarget(target);
+	//cameraController->SeTarget(target);
 	cameraController->Update(elapsedTime);
 	
 	//TrueBox更新処理

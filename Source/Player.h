@@ -15,6 +15,8 @@ public:
 	//•`‰æˆ—
 	void Render(const RenderContext& rc, ModelRenderer* renderer);
 
+	void InputGridMove();
+
 #ifdef _DEBUG
 	void DrawDebugGUI();
 
@@ -37,4 +39,9 @@ private:
 	Model* model = nullptr;
 	float moveSpeed = 5.0f;
 	float turnSpeed = DirectX::XMConvertToRadians(720);
+
+	bool isMoving = false;
+	float moveCooldown = 0.0f;
+	const float moveInterval = 0.2f;
+
 };
