@@ -3,9 +3,9 @@
 //コンストラクタ
 TrueBox::TrueBox()
 {
-	model = new Model("Data/Model/Slime/Slime.mdl");
+	model = new Model("Data/Model/Moai/moai01.mdl");
 	//スケーリング
-	scale.x = scale.y = scale.z = 0.01f;
+	scale.x = scale.y = scale.z = 0.1f;
 }
 
 //デストラクタ
@@ -17,7 +17,9 @@ TrueBox::~TrueBox()
 //更新処理
 void TrueBox::Update(float elapsedTime)
 {
+	//オブジェクト行列更新
 	UpdateTransform();
+	//モデル行列更新
 	model->UpdateTransform();
 }
 
@@ -26,3 +28,4 @@ void TrueBox::Render(const RenderContext& rc, ModelRenderer* renderer)
 {
 	renderer->Render(rc, transform, model, ShaderId::Lambert);
 }
+

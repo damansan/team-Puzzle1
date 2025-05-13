@@ -14,4 +14,6 @@ public:
 	//•`‰æˆ—
 	virtual void Render(const RenderContext& rc, ModelRenderer* renderer) = 0;
 
+
+
 };

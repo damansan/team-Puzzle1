@@ -2,7 +2,7 @@
 #include"System/Model.h"
 #include"Box.h"
 
-//トゥルーボックス
+//Trueボックス
 class TrueBox : public Box
 {
 public:

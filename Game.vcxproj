@@ -121,21 +121,26 @@
     <ClInclude Include="External\imgui-docking\imstb_truetype.h" />
     <ClInclude Include="Source\Box.h" />
     <ClInclude Include="Source\BoxManager.h" />
-    <ClInclude Include="Source\Camera.h" />
     <ClInclude Include="Source\CameraController.h" />
     <ClInclude Include="Source\Character.h" />
+    <ClInclude Include="Source\Collision.h" />
+    <ClInclude Include="Source\FalseBox.h" />
     <ClInclude Include="Source\Framework.h" />
+    <ClInclude Include="Source\GoalTiles.h" />
+    <ClInclude Include="Source\Judge.h" />
     <ClInclude Include="Source\Player.h" />
-    <ClInclude Include="Source\Raycast.h" />
     <ClInclude Include="Source\Scene.h" />
     <ClInclude Include="Source\SceneGame.h" />
     <ClInclude Include="Source\SceneLoading.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="Source\SceneManager.h" />
+    <ClInclude Include="Source\SceneSelect.h" />
     <ClInclude Include="Source\SceneTitle.h" />
     <ClInclude Include="Source\SceneTutorial.h" />
     <ClInclude Include="Source\Stage.h" />
+    <ClInclude Include="Source\Stage1.h" />
+    <ClInclude Include="Source\StageManager.h" />
     <ClInclude Include="Source\System\Audio.h" />
     <ClInclude Include="Source\System\AudioResource.h" />
     <ClInclude Include="Source\System\AudioSource.h" />
@@ -157,6 +162,7 @@
     <ClInclude Include="Source\System\Shader.h" />
     <ClInclude Include="Source\System\ShapeRenderer.h" />
     <ClInclude Include="Source\System\Sprite.h" />
+    <ClInclude Include="Source\Camera.h" />
     <ClInclude Include="Source\TrueBox.h" />
   </ItemGroup>
   <ItemGroup>
@@ -170,18 +176,23 @@
     <ClCompile Include="Source\Camera.cpp" />
     <ClCompile Include="Source\CameraController.cpp" />
     <ClCompile Include="Source\Character.cpp" />
+    <ClCompile Include="Source\Collision.cpp" />
+    <ClCompile Include="Source\FalseBox.cpp" />
     <ClCompile Include="Source\Framework.cpp" />
+    <ClCompile Include="Source\GoalTiles.cpp" />
+    <ClCompile Include="Source\Judge.cpp" />
     <ClCompile Include="Source\Main.cpp" />
     <ClCompile Include="Source\Player.cpp" />
-    <ClCompile Include="Source\Raycast.cpp" />
     <ClCompile Include="Source\SceneGame.cpp" />
     <ClCompile Include="Source\SceneLoading.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Source\SceneManager.cpp" />
+    <ClCompile Include="Source\SceneSelect.cpp" />
     <ClCompile Include="Source\SceneTitle.cpp" />
     <ClCompile Include="Source\SceneTutorial.cpp" />
-    <ClCompile Include="Source\Stage.cpp" />
+    <ClCompile Include="Source\Stage1.cpp" />
+    <ClCompile Include="Source\StageManager.cpp" />
     <ClCompile Include="Source\System\Audio.cpp" />
     <ClCompile Include="Source\System\AudioResource.cpp" />
     <ClCompile Include="Source\System\AudioSource.cpp" />

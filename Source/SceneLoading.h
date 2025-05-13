@@ -3,26 +3,19 @@
 #include"Scene.h"
 #include<thread>
 
-//ローディングシーン
 class SceneLoading :public Scene
 {
 public:
 	SceneLoading(Scene* nextScene) :nextScene(nextScene) {}
 	~SceneLoading()override {}
 
-	//初期化
 	void Initialize()override;
-	//終了化
 	void Finalize()override;
-	//更新処理
 	void Update(float elapsdTime)override;
-	//描画処理
 	void Render()override;
-	//GUI
 	void DrawGUI()override;
 
 private:
-	//ローディングスレッド
 	static void LoadingThread(SceneLoading* scene);
 
 private:

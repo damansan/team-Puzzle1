@@ -19,6 +19,24 @@
     <Filter Include="Source\System">
       <UniqueIdentifier>{bdca9bd5-7c86-4bde-986d-9cf51f91eb5a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Camera">
+      <UniqueIdentifier>{1d37fc38-7b2b-4124-9995-1b2afeb70086}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Scene">
+      <UniqueIdentifier>{cd5e6aaf-ff64-40ee-8a58-ea0573d446c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Box">
+      <UniqueIdentifier>{889ca834-59ba-4bfc-b16c-ddcd532855f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Collision">
+      <UniqueIdentifier>{14e2402a-b740-4f3e-8ac9-2b0a1eec71ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Stage">
+      <UniqueIdentifier>{8a4f4816-d62c-4211-8221-aef5df1f83f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Judge">
+      <UniqueIdentifier>{1561bb32-3516-4278-9cc2-3c49b9428c5a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="External\imgui-docking\imconfig.h">
@@ -111,49 +129,67 @@
     <ClInclude Include="Source\System\Sprite.h">
       <Filter>Source\System</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Stage.h">
-      <Filter>Source</Filter>
-    </ClInclude>
     <ClInclude Include="Source\Character.h">
       <Filter>Source</Filter>
     </ClInclude>
     <ClInclude Include="Source\Player.h">
       <Filter>Source</Filter>
     </ClInclude>
-    <ClInclude Include="Source\SceneTutorial.h">
-      <Filter>Source</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\SceneTitle.h">
-      <Filter>Source</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\SceneManager.h">
-      <Filter>Source</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\SceneLoading.h">
-      <Filter>Source</Filter>
+    <ClInclude Include="Source\Scene.h">
+      <Filter>Source\Scene</Filter>
     </ClInclude>
     <ClInclude Include="Source\SceneGame.h">
-      <Filter>Source</Filter>
+      <Filter>Source\Scene</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Scene.h">
-      <Filter>Source</Filter>
+    <ClInclude Include="Source\SceneLoading.h">
+      <Filter>Source\Scene</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Camera.h">
-      <Filter>Source</Filter>
+    <ClInclude Include="Source\SceneManager.h">
+      <Filter>Source\Scene</Filter>
     </ClInclude>
-    <ClInclude Include="Source\CameraController.h">
-      <Filter>Source\System</Filter>
+    <ClInclude Include="Source\SceneTitle.h">
+      <Filter>Source\Scene</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Box.h">
-      <Filter>Source</Filter>
+    <ClInclude Include="Source\SceneTutorial.h">
+      <Filter>Source\Scene</Filter>
     </ClInclude>
     <ClInclude Include="Source\BoxManager.h">
-      <Filter>Source</Filter>
+      <Filter>Source\Box</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Box.h">
+      <Filter>Source\Box</Filter>
     </ClInclude>
     <ClInclude Include="Source\TrueBox.h">
-      <Filter>Source</Filter>
+      <Filter>Source\Box</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Raycast.h">
+    <ClInclude Include="Source\Camera.h">
+      <Filter>Source\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CameraController.h">
+      <Filter>Source\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\FalseBox.h">
+      <Filter>Source\Box</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Collision.h">
+      <Filter>Source\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\StageManager.h">
+      <Filter>Source\Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Stage.h">
+      <Filter>Source\Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Stage1.h">
+      <Filter>Source\Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\GoalTiles.h">
+      <Filter>Source\Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Judge.h">
+      <Filter>Source\Judge</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SceneSelect.h">
       <Filter>Source</Filter>
     </ClInclude>
   </ItemGroup>
@@ -233,43 +269,58 @@
     <ClCompile Include="Source\System\Sprite.cpp">
       <Filter>Source\System</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Stage.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
     <ClCompile Include="Source\Character.cpp">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\Player.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Camera.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\SceneTutorial.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\SceneTitle.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\SceneManager.cpp">
-      <Filter>Source</Filter>
+    <ClCompile Include="Source\SceneGame.cpp">
+      <Filter>Source\Scene</Filter>
     </ClCompile>
     <ClCompile Include="Source\SceneLoading.cpp">
-      <Filter>Source</Filter>
+      <Filter>Source\Scene</Filter>
     </ClCompile>
-    <ClCompile Include="Source\SceneGame.cpp">
-      <Filter>Source</Filter>
+    <ClCompile Include="Source\SceneManager.cpp">
+      <Filter>Source\Scene</Filter>
     </ClCompile>
-    <ClCompile Include="Source\CameraController.cpp">
-      <Filter>Source</Filter>
+    <ClCompile Include="Source\SceneTitle.cpp">
+      <Filter>Source\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SceneTutorial.cpp">
+      <Filter>Source\Scene</Filter>
     </ClCompile>
     <ClCompile Include="Source\BoxManager.cpp">
-      <Filter>Source</Filter>
+      <Filter>Source\Box</Filter>
     </ClCompile>
     <ClCompile Include="Source\TrueBox.cpp">
-      <Filter>Source</Filter>
+      <Filter>Source\Box</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Raycast.cpp">
+    <ClCompile Include="Source\Camera.cpp">
+      <Filter>Source\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CameraController.cpp">
+      <Filter>Source\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\FalseBox.cpp">
+      <Filter>Source\Box</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Collision.cpp">
+      <Filter>Source\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\StageManager.cpp">
+      <Filter>Source\Stage</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Stage1.cpp">
+      <Filter>Source\Stage</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GoalTiles.cpp">
+      <Filter>Source\Stage</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Judge.cpp">
+      <Filter>Source\Judge</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SceneSelect.cpp">
       <Filter>Source</Filter>
     </ClCompile>
   </ItemGroup>

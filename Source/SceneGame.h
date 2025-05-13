@@ -3,7 +3,9 @@
 #include"Stage.h"
 #include"Player.h"
 #include"Scene.h"
-#include "CameraController.h"
+#include"CameraController.h"
+#include "Judge.h"
+
 
 //ÉQÅ[ÉÄÉVÅ[Éì
 class SceneGame :public Scene
@@ -31,4 +33,5 @@ private:
 	Stage* stage = nullptr;
 	Player* player = nullptr;
 	CameraController* cameraController = nullptr;
+	Judge* judge = nullptr;
 };
